@@ -138,20 +138,20 @@ tiltCards.forEach(card => {
     positions[i * 3 + 2] = (Math.random() - 0.5) * 80 - 10;
   }
   starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  const starMat = new THREE.PointsMaterial({ color: 0x4fd6ff, size: 0.16, transparent: true, opacity: 0.7 });
+  const starMat = new THREE.PointsMaterial({ color: 0xc7f94b, size: 0.16, transparent: true, opacity: 0.7 });
   const stars = new THREE.Points(starGeo, starMat);
   scene.add(stars);
 
   /* Floating wireframe icosahedron */
   const icoGeo = new THREE.IcosahedronGeometry(9, 1);
-  const icoMat = new THREE.MeshBasicMaterial({ color: 0x4fd6ff, wireframe: true, transparent: true, opacity: 0.35 });
+  const icoMat = new THREE.MeshBasicMaterial({ color: 0xc7f94b, wireframe: true, transparent: true, opacity: 0.35 });
   const ico = new THREE.Mesh(icoGeo, icoMat);
   ico.position.set(18, 4, -8);
   scene.add(ico);
 
   /* Secondary smaller torus */
   const torusGeo = new THREE.TorusGeometry(5, 0.4, 8, 60);
-  const torusMat = new THREE.MeshBasicMaterial({ color: 0x8a6bff, wireframe: true, transparent: true, opacity: 0.22 });
+  const torusMat = new THREE.MeshBasicMaterial({ color: 0x9be55a, wireframe: true, transparent: true, opacity: 0.22 });
   const torus = new THREE.Mesh(torusGeo, torusMat);
   torus.position.set(-27, -9, -16);
   scene.add(torus);
