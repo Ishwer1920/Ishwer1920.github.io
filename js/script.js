@@ -52,7 +52,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealEls.forEach(el => revealObserver.observe(el));
 
 /* ===================== Typed role text ===================== */
-const roles = ['scalable web apps', 'clean React UIs', 'brand & video content', 'full-stack products'];
+const roles = ['live e-commerce stores', 'brand creatives & logos', 'edited video content', 'responsive front-ends'];
 const typedEl = document.getElementById('typed');
 let roleIndex = 0, charIndex = 0, deleting = false;
 

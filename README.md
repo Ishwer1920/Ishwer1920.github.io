@@ -18,8 +18,11 @@ assets/            Downloadable resume PDF
 - **Profile photo**: `assets/ishwer_singh.png` is already wired into the "About Me" section.
   If that file is ever missing, the site automatically falls back to an "IS" initials avatar,
   so nothing breaks either way.
-- Project card `Live Demo` / `Source Code` links (currently `#`) → point to your actual repos
-  once you push each project, or your live GitHub Pages demos.
+- Project card links point to the live client sites (muscletonik.com, blegendusa.com,
+  icorepharma.com) and to the GitHub repos / GitHub Pages demos for the personal builds.
+  Update them if any repo name or URL changes.
+- The downloadable CV at `assets/Ishwer_Singh_Resume.pdf` is wired into the nav/hero buttons —
+  replace that file whenever the resume is updated so the download stays in sync.
 
 Contact info (email, phone, GitHub, LinkedIn) is already filled in.
 
