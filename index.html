@@ -5,34 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ishwer Singh | Graphic Designer, Video Editor & Front-End Developer</title>
 <meta name="description" content="Portfolio of Ishwer Singh — Graphic Designer, Video Editor and Front-End Developer who designs brand creatives and ships live client e-commerce websites with HTML, CSS and JavaScript." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💠</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23e8552b%22/><text x=%2250%22 y=%2272%22 font-size=%2258%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22%23fff%22 text-anchor=%22middle%22>IS</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=2" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
 
-<div id="loader">
-  <div class="loader-core"></div>
-  <p>INITIALIZING PORTFOLIO<span class="dots"></span></p>
-</div>
-
-<canvas id="bg-canvas"></canvas>
+<!-- Orange frame -->
+<div class="frame" aria-hidden="true"></div>
 
 <header id="header">
   <nav class="nav container">
-    <a href="#home" class="logo">IS<span>.</span></a>
+    <div class="nav-left">
+      <a href="#home" class="logo">IS</a>
+      <span class="status"><span class="status-dot"></span>Available for work</span>
+    </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#home" class="nav-link active">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#work" class="nav-link">Work</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <a href="assets/Ishwer_Singh_Resume.pdf" target="_blank" class="btn btn-outline nav-cta">Resume</a>
+    <a href="#contact" class="btn btn-primary nav-cta">✦ Let's Talk</a>
     <button id="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
@@ -43,421 +41,296 @@
 
   <!-- HERO -->
   <section id="home" class="hero container">
-    <div class="hero-content" data-reveal>
-      <p class="eyebrow">👋 Hey, I'm</p>
-      <h1 class="hero-title">Ishwer Singh</h1>
-      <h2 class="hero-role">I design &amp; build <span id="typed" class="gradient-text"></span><span class="cursor">|</span></h2>
-      <p class="hero-desc">
-        Graphic Designer, Video Editor &amp; Front-End Developer and a B.Tech (CSE) graduate who
-        both designs and ships. I've delivered <strong>three client e-commerce stores</strong> live
-        in production — including
-        <a href="https://muscletonik.com" target="_blank" rel="noopener" class="inline-link">muscletonik.com</a> —
-        owning each brief end to end, from concept and visual direction through to launch.
+    <div class="hero-top">
+      <div class="hero-id" data-reveal>
+        <div class="avatar-tile">
+          <img src="assets/ishwer_singh.png" alt="Ishwer Singh"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="avatar-fallback" style="display:none;">IS</div>
+        </div>
+        <div class="hero-name">
+          <span class="im">I'M</span>
+          <h1>ISHWER<br>SINGH</h1>
+        </div>
+      </div>
+      <p class="hero-tag" data-reveal>
+        A Graphic Designer, Video Editor &amp; Front-End Developer based in Amritsar, Punjab —
+        who both designs and ships.
       </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-        <a href="assets/Ishwer_Singh_Resume.pdf" target="_blank" class="btn btn-ghost">⬇ Download CV</a>
+    </div>
+
+    <!-- Featured work panel -->
+    <div class="feature-card" data-reveal>
+      <div class="feature-head">
+        <span class="feature-title">LIVE E-COMMERCE / CLIENT WORK</span>
+        <a href="#work" class="feature-explore">Explore the Work ↗</a>
+        <span class="feature-index">// 01</span>
       </div>
-      <div class="hero-socials">
-        <a href="https://github.com/Ishwer1920" target="_blank" rel="noopener" aria-label="GitHub" class="social-link" data-social="github">
-          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.35-3.84-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.8 10.8 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.67 5.34-5.21 5.62.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/ishwer-singh" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link" data-social="linkedin">
-          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-        <a href="mailto:ishwer1920@gmail.com" aria-label="Email" class="social-link" data-social="email">
-          <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6.2 7.8-6.2H4.2zm15.8 1.6-7.5 5.97a1 1 0 0 1-1.24 0L4 7.6v10.9c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V7.6z"/></svg>
-        </a>
+      <div class="feature-panel">
+        <div class="feature-panel-text">
+          <h2>Three client stores,<br><span class="green">live in production.</span></h2>
+          <p>From visual identity and UI system through to launch — I own each brief end to end.</p>
+          <div class="feature-pills">
+            <span>◆ Brand &amp; Design</span>
+            <span>◆ Front-End Build</span>
+            <span>◆ Deployed Live</span>
+          </div>
+        </div>
+        <div class="feature-panel-sites">
+          <a href="https://muscletonik.com" target="_blank" rel="noopener" class="site-row">
+            <span class="site-name">muscletonik.com</span><span class="site-go">↗</span>
+          </a>
+          <a href="https://blegendusa.com" target="_blank" rel="noopener" class="site-row">
+            <span class="site-name">blegendusa.com</span><span class="site-go">↗</span>
+          </a>
+          <a href="https://icorepharma.com" target="_blank" rel="noopener" class="site-row">
+            <span class="site-name">icorepharma.com</span><span class="site-go">↗</span>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="orbit-ring r1"></div>
-      <div class="orbit-ring r2"></div>
-      <div class="glow-sphere"></div>
-    </div>
-    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Graphic Design</span><span class="dot">✦</span>
-      <span>Video Editing</span><span class="dot">✦</span>
-      <span>Front-End Development</span><span class="dot">✦</span>
-      <span>Brand Identity</span><span class="dot">✦</span>
-      <span>E-Commerce</span><span class="dot">✦</span>
-      <span>Motion &amp; Thumbnails</span><span class="dot">✦</span>
-      <span>Graphic Design</span><span class="dot">✦</span>
-      <span>Video Editing</span><span class="dot">✦</span>
-      <span>Front-End Development</span><span class="dot">✦</span>
-      <span>Brand Identity</span><span class="dot">✦</span>
-      <span>E-Commerce</span><span class="dot">✦</span>
-      <span>Motion &amp; Thumbnails</span><span class="dot">✦</span>
+  <!-- STATS -->
+  <section id="stats" class="section container">
+    <div class="sec-head" data-reveal>
+      <span class="badge">IS</span>
+      <span class="sec-label">STATS</span>
+      <p class="sec-desc">A quick look at the measurable work behind the design journey.</p>
     </div>
-  </div>
+    <div class="stats-row">
+      <div class="stat-box" data-reveal>
+        <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Live Client Sites</span>
+      </div>
+      <div class="stat-box dark" data-reveal>
+        <span class="stat-num" data-count="6">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Projects Built</span>
+      </div>
+      <div class="stat-box" data-reveal>
+        <span class="stat-num" data-count="1">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Year Freelancing</span>
+      </div>
+    </div>
+  </section>
 
   <!-- ABOUT -->
   <section id="about" class="section container">
-    <p class="section-tag" data-reveal>01 — About Me</p>
-    <h2 class="section-title" data-reveal>Who I Am</h2>
-
+    <div class="sec-head" data-reveal>
+      <span class="badge">IS</span>
+      <span class="sec-label">ABOUT</span>
+      <p class="sec-desc">Who I am and how I work.</p>
+    </div>
     <div class="about-grid">
-      <div class="about-card tilt-card" data-reveal>
-        <div class="avatar-ring">
-          <img src="assets/ishwer_singh.png" alt="Ishwer Singh" class="avatar-photo"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="avatar-inner" style="display:none;">IS</div>
-        </div>
-      </div>
-
-      <div class="about-text" data-reveal>
+      <h2 class="about-statement" data-reveal>
+        I design brand creatives, edit video, and ship
+        <span class="green">front-end web experiences</span> — owning each brief from concept to deadline.
+      </h2>
+      <div class="about-body" data-reveal>
         <p>
           I'm a graphic designer and video editor with hands-on freelance experience producing
           brand creatives, logos, posters, thumbnails and edited video for paying clients — and a
-          <strong>B.Tech (Computer Science)</strong> graduate (2022–2026) who both designs and
-          ships.
+          <strong>B.Tech (Computer Science)</strong> graduate (2022–2026) who both designs and ships.
         </p>
         <p>
           On the web I build front-end experiences end to end, and I've delivered
-          <strong>three client e-commerce stores</strong> now live in production —
-          <a href="https://muscletonik.com" target="_blank" rel="noopener" class="inline-link">muscletonik.com</a>,
-          <a href="https://blegendusa.com" target="_blank" rel="noopener" class="inline-link">blegendusa.com</a> and
-          <a href="https://icorepharma.com" target="_blank" rel="noopener" class="inline-link">icorepharma.com</a> —
-          each owned from concept and visual direction through editing, colour and motion to final
-          launch and deadline.
+          <strong>three client e-commerce stores</strong> now live in production — from visual
+          direction through editing, colour and motion to final launch.
         </p>
-
-        <div class="stats-row">
-          <div class="stat-box">
-            <span class="stat-num" data-count="3">0</span>
-            <span class="stat-label">Live Client Sites</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-num" data-count="6">0</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-num" data-count="1">0</span>
-            <span class="stat-label">Year Freelancing</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section container">
-    <p class="section-tag" data-reveal>02 — Experience</p>
-    <h2 class="section-title" data-reveal>Where I've Worked</h2>
+  <!-- WORK / CASE STUDY (dark) -->
+  <section id="work" class="section section-dark">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="badge">IS</span>
+        <span class="sec-label">SELECTED WORK</span>
+        <p class="sec-desc">Client e-commerce stores shipped live, plus hands-on front-end builds.</p>
+      </div>
 
-    <div class="timeline">
-      <div class="timeline-item" data-reveal>
-        <div class="timeline-dot"></div>
-        <div class="timeline-card tilt-card">
-          <span class="timeline-date">2025 — Present</span>
-          <h3>Freelance Graphic Designer &amp; Video Editor</h3>
-          <p>Self-Employed · Client &amp; Independent Work</p>
-          <ul class="exp-list">
-            <li>Designed brand creatives, logos, posters and social-media thumbnails for clients, friends and independent brands, delivering finished assets to brief and deadline.</li>
-            <li>Edited short-form and long-form video including wedding films and gaming content — cutting, pacing, transitions, captions, music sync and colour correction.</li>
-            <li>Produced end-to-end content for client social pages: concept, creative direction, design, edit and final export in platform-ready formats.</li>
-            <li>Founded and grew independent social media pages, running the full content pipeline solo.</li>
-          </ul>
-          <div class="chip-row">
-            <span class="chip chip-sm">Photoshop</span>
-            <span class="chip chip-sm">After Effects</span>
-            <span class="chip chip-sm">Canva</span>
-            <span class="chip chip-sm">CapCut</span>
+      <div class="work-list">
+        <a href="https://muscletonik.com" target="_blank" rel="noopener" class="work-row" data-reveal>
+          <span class="work-no">01</span>
+          <div class="work-main">
+            <h3>Muscle Tonik <span class="live">● Live</span></h3>
+            <p>Supplement e-commerce storefront with an interactive diet &amp; workout plan generator and a "Deal of the Day" module.</p>
           </div>
-        </div>
+          <div class="work-tags">
+            <span>// E-Commerce</span><span>// UI System</span><span>// Responsive</span>
+          </div>
+          <span class="work-go">↗</span>
+        </a>
+
+        <a href="https://blegendusa.com" target="_blank" rel="noopener" class="work-row" data-reveal>
+          <span class="work-no">02</span>
+          <div class="work-main">
+            <h3>B Legend USA <span class="live">● Live</span></h3>
+            <p>US-based supplement storefront with full product catalog, cart flow and a secure admin dashboard for managing orders.</p>
+          </div>
+          <div class="work-tags">
+            <span>// E-Commerce</span><span>// Admin Dashboard</span><span>// Responsive</span>
+          </div>
+          <span class="work-go">↗</span>
+        </a>
+
+        <a href="https://icorepharma.com" target="_blank" rel="noopener" class="work-row" data-reveal>
+          <span class="work-no">03</span>
+          <div class="work-main">
+            <h3>iCore Pharma <span class="live">● Live</span></h3>
+            <p>Health &amp; pharma supplement e-commerce site with a clean clinical design language and a content/catalogue management dashboard.</p>
+          </div>
+          <div class="work-tags">
+            <span>// E-Commerce</span><span>// Admin Dashboard</span><span>// Responsive</span>
+          </div>
+          <span class="work-go">↗</span>
+        </a>
+      </div>
+
+      <div class="builds-grid">
+        <article class="build-card" data-reveal>
+          <div class="build-thumb thumb-a"><span>♪</span></div>
+          <h4>Web Music Player</h4>
+          <p>Audio streaming app on the HTML5 Audio API with real-time seeking and JSON-driven playlists.</p>
+          <div class="build-links">
+            <a href="https://ishwer1920.github.io/music/" target="_blank" rel="noopener">Live ↗</a>
+            <a href="https://github.com/Ishwer1920/music" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+        <article class="build-card" data-reveal>
+          <div class="build-thumb thumb-b"><span>⌘</span></div>
+          <h4>Car Rental System</h4>
+          <p>Vehicle booking app with catalog filtering, cost calculation and Local Storage persistence.</p>
+          <div class="build-links">
+            <a href="https://ishwer1920.github.io/car_Rental_System/" target="_blank" rel="noopener">Live ↗</a>
+            <a href="https://github.com/Ishwer1920/car_Rental_System" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+        <article class="build-card" data-reveal>
+          <div class="build-thumb thumb-c"><span>◆</span></div>
+          <h4>Bingo Game</h4>
+          <p>Interactive Bingo with 2D-array board state and a real-time row/column/diagonal win detector.</p>
+          <div class="build-links">
+            <a href="https://ishwer1920.github.io/bingo/" target="_blank" rel="noopener">Live ↗</a>
+            <a href="https://github.com/Ishwer1920/bingo" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- CAPABILITIES / SKILLS -->
   <section id="skills" class="section container">
-    <p class="section-tag" data-reveal>03 — Skills</p>
-    <h2 class="section-title" data-reveal>What I Work With</h2>
-
-    <div class="skills-grid">
-
-      <div class="skill-card tilt-card" data-reveal>
-        <div class="skill-icon">◎</div>
+    <div class="sec-head" data-reveal>
+      <span class="badge">IS</span>
+      <span class="sec-label">CAPABILITIES</span>
+      <p class="sec-desc">Here's how I help brands bring their ideas to life — through design, video and code.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card" data-reveal>
+        <span class="cap-no">01</span>
         <h3>Design &amp; Video</h3>
         <div class="chip-row">
-          <span class="chip">Adobe After Effects</span>
-          <span class="chip">Adobe Photoshop</span>
-          <span class="chip">Canva</span>
-          <span class="chip">CapCut</span>
-          <span class="chip">Logo Design</span>
-          <span class="chip">Poster &amp; Creative Design</span>
-          <span class="chip">Thumbnail Design</span>
-          <span class="chip">Brand Identity</span>
-          <span class="chip">Social Media Content</span>
-          <span class="chip">Video Editing</span>
-          <span class="chip">Colour Correction</span>
-          <span class="chip">Keyframe Animation</span>
-          <span class="chip">Captions &amp; Motion Text</span>
+          <span class="chip">After Effects</span><span class="chip">Photoshop</span>
+          <span class="chip">Canva</span><span class="chip">CapCut</span>
+          <span class="chip">Logo Design</span><span class="chip">Poster &amp; Creative</span>
+          <span class="chip">Thumbnails</span><span class="chip">Brand Identity</span>
+          <span class="chip">Video Editing</span><span class="chip">Colour Correction</span>
+          <span class="chip">Keyframe Animation</span><span class="chip">Captions &amp; Motion</span>
         </div>
       </div>
-
-      <div class="skill-card tilt-card" data-reveal>
-        <div class="skill-icon">◧</div>
-        <h3>Front-End Development</h3>
+      <div class="cap-card" data-reveal>
+        <span class="cap-no">02</span>
+        <h3>Front-End Dev</h3>
         <div class="chip-row">
-          <span class="chip">HTML5</span>
-          <span class="chip">CSS3</span>
-          <span class="chip">JavaScript (ES6+)</span>
-          <span class="chip">Responsive Design</span>
-          <span class="chip">Admin Dashboards</span>
-          <span class="chip">Reusable Components</span>
+          <span class="chip">HTML5</span><span class="chip">CSS3</span>
+          <span class="chip">JavaScript (ES6+)</span><span class="chip">Responsive Design</span>
+          <span class="chip">Admin Dashboards</span><span class="chip">Reusable Components</span>
         </div>
       </div>
-
-      <div class="skill-card tilt-card" data-reveal>
-        <div class="skill-icon">✦</div>
+      <div class="cap-card" data-reveal>
+        <span class="cap-no">03</span>
         <h3>Tools</h3>
         <div class="chip-row">
-          <span class="chip">Claude</span>
-          <span class="chip">ChatGPT</span>
-          <span class="chip">VS Code</span>
-          <span class="chip">Git</span>
-          <span class="chip">GitHub Pages</span>
-          <span class="chip">Webpack</span>
+          <span class="chip">Claude</span><span class="chip">ChatGPT</span>
+          <span class="chip">VS Code</span><span class="chip">Git</span>
+          <span class="chip">GitHub Pages</span><span class="chip">Webpack</span>
           <span class="chip">Postman</span>
         </div>
       </div>
-
-      <div class="skill-card tilt-card" data-reveal>
-        <div class="skill-icon">⌘</div>
+      <div class="cap-card" data-reveal>
+        <span class="cap-no">04</span>
         <h3>Strengths</h3>
         <div class="chip-row">
-          <span class="chip">Client Communication</span>
-          <span class="chip">Creative Direction</span>
-          <span class="chip">Ownership</span>
-          <span class="chip">Meeting Deadlines</span>
-          <span class="chip">Problem Solving</span>
-          <span class="chip">Adaptability</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section container">
-    <p class="section-tag" data-reveal>04 — Projects</p>
-    <h2 class="section-title" data-reveal>Things I've Built</h2>
-
-    <p class="section-sub" data-reveal>
-      Three client e-commerce stores shipped live in production, plus hands-on builds exploring
-      front-end logic and interaction.
-    </p>
-
-    <article class="project-card project-featured tilt-card" data-reveal>
-      <div class="project-glow"></div>
-      <div class="project-head">
-        <span class="project-date">2026</span>
-        <span class="live-badge">● Live in Production</span>
-      </div>
-      <h3>Muscle Tonik — Client E-Commerce Website</h3>
-      <p class="project-link-line">
-        <a href="https://muscletonik.com" target="_blank" rel="noopener" class="inline-link">muscletonik.com</a>
-      </p>
-      <p>Designed and built a complete multi-page supplement e-commerce storefront for a client —
-        currently hosted live and serving real customers.</p>
-      <ul class="exp-list">
-        <li>Created the full visual identity and UI system: hero carousel, product cards, category and brand pages, and a consistent premium orange-and-black design language across every screen.</li>
-        <li>Developed an interactive plan generator that takes height, weight and fitness goal as input and returns a personalised diet and workout recommendation.</li>
-        <li>Engineered a countdown-timer "Deal of the Day" module, plus best-seller, featured-product, customer-review and transformation-story sections with a newsletter capture flow.</li>
-        <li>Delivered a fully responsive multi-page architecture (marketplace, categories, brands, offers) tested across mobile, tablet and desktop.</li>
-      </ul>
-      <div class="chip-row">
-        <span class="chip chip-sm">HTML5</span>
-        <span class="chip chip-sm">CSS3</span>
-        <span class="chip chip-sm">JavaScript (ES6+)</span>
-        <span class="chip chip-sm">Responsive Design</span>
-      </div>
-      <div class="project-links">
-        <a href="https://muscletonik.com" target="_blank" rel="noopener">Live Site ↗</a>
-      </div>
-    </article>
-
-    <div class="projects-grid">
-
-      <article class="project-card tilt-card" data-reveal>
-        <div class="project-glow"></div>
-        <div class="project-head">
-          <span class="project-date">2026</span>
-          <span class="live-badge">● Live in Production</span>
-        </div>
-        <h3>B Legend USA — Client E-Commerce Website</h3>
-        <p class="project-link-line">
-          <a href="https://blegendusa.com" target="_blank" rel="noopener" class="inline-link">blegendusa.com</a>
-        </p>
-        <p>Designed and built a complete multi-page supplement e-commerce storefront for a US-based
-          client (BeLegend), deployed live in production.</p>
-        <ul class="exp-list">
-          <li>Built the full storefront and brand UI system — hero and promo sections, product catalog, category and brand pages, product detail views and cart flow — with a bold, cohesive visual identity.</li>
-          <li>Implemented a secure admin login and back-office dashboard for managing products, catalogue content and customer orders.</li>
-          <li>Delivered a fully responsive, cross-device layout built from reusable, maintainable components.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip chip-sm">HTML5</span>
-          <span class="chip chip-sm">CSS3</span>
-          <span class="chip chip-sm">JavaScript (ES6+)</span>
-          <span class="chip chip-sm">Responsive Design</span>
-          <span class="chip chip-sm">Admin Dashboard</span>
-        </div>
-        <div class="project-links">
-          <a href="https://blegendusa.com" target="_blank" rel="noopener">Live Site ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card tilt-card" data-reveal>
-        <div class="project-glow"></div>
-        <div class="project-head">
-          <span class="project-date">2026</span>
-          <span class="live-badge">● Live in Production</span>
-        </div>
-        <h3>iCore Pharma — Client E-Commerce Website</h3>
-        <p class="project-link-line">
-          <a href="https://icorepharma.com" target="_blank" rel="noopener" class="inline-link">icorepharma.com</a>
-        </p>
-        <p>Developed a complete health and pharma supplement e-commerce website for the IronCore
-          Pharma brand, hosted live in production.</p>
-        <ul class="exp-list">
-          <li>Created the storefront experience — landing sections, product listings, category navigation and product detail pages — with a clean, clinical design language.</li>
-          <li>Built an admin login and management dashboard to handle catalogue, content and customer enquiries behind the store.</li>
-          <li>Engineered a responsive multi-page architecture with consistent, reusable UI components across every screen.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip chip-sm">HTML5</span>
-          <span class="chip chip-sm">CSS3</span>
-          <span class="chip chip-sm">JavaScript (ES6+)</span>
-          <span class="chip chip-sm">Responsive Design</span>
-          <span class="chip chip-sm">Admin Dashboard</span>
-        </div>
-        <div class="project-links">
-          <a href="https://icorepharma.com" target="_blank" rel="noopener">Live Site ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card tilt-card" data-reveal>
-        <div class="project-glow"></div>
-        <div class="project-head">
-          <span class="project-date">2025</span>
-          <span class="project-type">Web App</span>
-        </div>
-        <h3>Web Music Player</h3>
-        <p>Responsive audio streaming web app built with vanilla JavaScript and the HTML5 Audio API —
-          play/pause, real-time progress seeking and volume control via custom event listeners, with
-          song details and album art rendered dynamically from JSON data structures.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">JavaScript (ES6+)</span>
-          <span class="chip chip-sm">HTML5 Audio API</span>
-          <span class="chip chip-sm">CSS3</span>
-          <span class="chip chip-sm">GitHub Pages</span>
-        </div>
-        <div class="project-links">
-          <a href="https://ishwer1920.github.io/music/" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a href="https://github.com/Ishwer1920/music" target="_blank" rel="noopener">Source Code ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card tilt-card" data-reveal>
-        <div class="project-glow"></div>
-        <div class="project-head">
-          <span class="project-date">2025</span>
-          <span class="project-type">Web App</span>
-        </div>
-        <h3>Car Rental System</h3>
-        <p>Vehicle booking web app with a dynamic inventory catalog filtering vehicles by brand, type
-          and price, plus a booking flow with form validation and cost calculation. Uses Local Storage
-          to persist booking requests and rental history across a user session.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">JavaScript (ES6+)</span>
-          <span class="chip chip-sm">HTML5</span>
-          <span class="chip chip-sm">CSS3</span>
-          <span class="chip chip-sm">Local Storage</span>
-        </div>
-        <div class="project-links">
-          <a href="https://ishwer1920.github.io/car_Rental_System/" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a href="https://github.com/Ishwer1920/car_Rental_System" target="_blank" rel="noopener">Source Code ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card tilt-card" data-reveal>
-        <div class="project-glow"></div>
-        <div class="project-head">
-          <span class="project-date">2025</span>
-          <span class="project-type">Web Game</span>
-        </div>
-        <h3>Bingo Game Application</h3>
-        <p>Interactive browser Bingo game using 2D arrays for board state and a real-time win-detection
-          algorithm validating rows, columns and diagonals on every move, across a dynamic CSS Grid
-          board with randomized generation for unique sessions.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">JavaScript (ES6+)</span>
-          <span class="chip chip-sm">CSS Grid</span>
-          <span class="chip chip-sm">Algorithms</span>
-          <span class="chip chip-sm">GitHub Pages</span>
-        </div>
-        <div class="project-links">
-          <a href="https://ishwer1920.github.io/bingo/" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a href="https://github.com/Ishwer1920/bingo" target="_blank" rel="noopener">Source Code ↗</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="section container">
-    <p class="section-tag" data-reveal>05 — Education</p>
-    <h2 class="section-title" data-reveal>Academic Background</h2>
-
-    <div class="timeline">
-      <div class="timeline-item" data-reveal>
-        <div class="timeline-dot"></div>
-        <div class="timeline-card tilt-card">
-          <span class="timeline-date">2022 — 2026</span>
-          <h3>B.Tech, Computer Science &amp; Engineering</h3>
-          <p>Amritsar College of Engineering &amp; Technology · Amritsar, India</p>
+          <span class="chip">Client Communication</span><span class="chip">Creative Direction</span>
+          <span class="chip">Ownership</span><span class="chip">Meeting Deadlines</span>
+          <span class="chip">Problem Solving</span><span class="chip">Adaptability</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- EXPERIENCE + EDUCATION (dark) -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="badge">IS</span>
+        <span class="sec-label">EXPERIENCE &amp; EDUCATION</span>
+        <p class="sec-desc">Where I've worked and what I studied.</p>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-col" data-reveal>
+          <span class="exp-kicker">// EXPERIENCE</span>
+          <div class="exp-item">
+            <div class="exp-row"><h3>Freelance Graphic Designer &amp; Video Editor</h3><span class="exp-date">2025 — Present</span></div>
+            <p class="exp-org">Self-Employed · Client &amp; Independent Work · Amritsar</p>
+            <ul>
+              <li>Designed brand creatives, logos, posters and thumbnails for clients to brief and deadline.</li>
+              <li>Edited short- and long-form video — cutting, pacing, captions, music sync and colour correction.</li>
+              <li>Produced end-to-end content for client social pages, concept through platform-ready export.</li>
+              <li>Founded and grew independent social pages, running the full content pipeline solo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-col" data-reveal>
+          <span class="exp-kicker">// EDUCATION</span>
+          <div class="exp-item">
+            <div class="exp-row"><h3>B.Tech, Computer Science &amp; Engineering</h3><span class="exp-date">2022 — 2026</span></div>
+            <p class="exp-org">Amritsar College of Engineering &amp; Technology · Amritsar, India</p>
+            <ul>
+              <li>Computer Science graduate who both designs and ships production web experiences.</li>
+              <li>Built multiple front-end projects spanning e-commerce, web apps and interactive games.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
   <section id="contact" class="section container">
-    <p class="section-tag" data-reveal>06 — Contact</p>
-    <h2 class="section-title" data-reveal>Let's Build Something</h2>
-    <p class="section-sub" data-reveal>
-      I'm open to internships, freelance work and collaborations. Reach out and I'll get back to you.
-    </p>
-
+    <div class="cta" data-reveal>
+      <h2>LET'S BUILD<br>SOMETHING GREAT<br>TOGETHER</h2>
+      <p>Open to internships, freelance work and collaborations. Let's talk.</p>
+      <a href="mailto:ishwer1920@gmail.com" class="btn btn-primary btn-lg">✦ Get in Touch</a>
+    </div>
     <div class="contact-grid">
-      <a class="contact-card tilt-card" href="mailto:ishwer1920@gmail.com" data-reveal>
-        <div class="contact-icon">✉</div>
-        <h3>Email</h3>
-        <p>ishwer1920@gmail.com</p>
+      <a class="contact-card" href="mailto:ishwer1920@gmail.com" data-reveal>
+        <span class="c-label">// EMAIL</span>
+        <span class="c-val">ishwer1920@gmail.com</span>
       </a>
-      <a class="contact-card tilt-card" href="https://github.com/Ishwer1920" target="_blank" rel="noopener" data-reveal>
-        <div class="contact-icon">GH</div>
-        <h3>GitHub</h3>
-        <p>github.com/Ishwer1920</p>
+      <a class="contact-card" href="tel:+919915711469" data-reveal>
+        <span class="c-label">// PHONE</span>
+        <span class="c-val">+91 99157 11469</span>
       </a>
-      <a class="contact-card tilt-card" href="https://linkedin.com/in/ishwer-singh" target="_blank" rel="noopener" data-reveal>
-        <div class="contact-icon">in</div>
-        <h3>LinkedIn</h3>
-        <p>linkedin.com/in/ishwer-singh</p>
+      <a class="contact-card" href="https://github.com/Ishwer1920" target="_blank" rel="noopener" data-reveal>
+        <span class="c-label">// GITHUB</span>
+        <span class="c-val">github.com/Ishwer1920</span>
       </a>
-      <a class="contact-card tilt-card" href="tel:+919915711469" data-reveal>
-        <div class="contact-icon">📞</div>
-        <h3>Phone</h3>
-        <p>+91 99157 11469</p>
+      <a class="contact-card" href="https://linkedin.com/in/ishwer-singh" target="_blank" rel="noopener" data-reveal>
+        <span class="c-label">// LINKEDIN</span>
+        <span class="c-val">linkedin.com/in/ishwer-singh</span>
       </a>
     </div>
   </section>
@@ -465,13 +338,37 @@
 </main>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Ishwer Singh. Built with HTML, CSS, JS &amp; Three.js.</p>
-    <a href="#home" class="back-top">Back to top ↑</a>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo">IS</a>
+        <p>Graphic Designer, Video Editor &amp; Front-End Developer. Designing and shipping from Amritsar, Punjab.</p>
+        <a href="assets/Ishwer_Singh_Resume.pdf" target="_blank" class="footer-resume">⬇ Download Résumé</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="footer-col-title">PAGES</span>
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">SOCIAL</span>
+          <a href="https://github.com/Ishwer1920" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/ishwer-singh" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:ishwer1920@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true">ISHWER SINGH</div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Ishwer Singh. All rights reserved.</span>
+      <a href="#home" class="back-top">Back to top ↑</a>
+    </div>
   </div>
 </footer>
 
-<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-<script src="js/script.js?v=2"></script>
+<script src="js/script.js?v=3"></script>
 </body>
 </html>
